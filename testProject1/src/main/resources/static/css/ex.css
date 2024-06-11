@@ -1,8 +1,9 @@
+@charset "utf-8";
 .container {
 	width: 50vw;
 	height: 400px;
 	margin: auto;
-	background-color: skyblue;
+	background-color: Lightpink;
 }
 
 .container img {
