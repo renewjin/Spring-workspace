@@ -17,12 +17,35 @@
 	</form>
 	
 	
-	<form action="연결주소값2" method="POST">
-		책 제목 : <input type="text" name="title"><br>
-		작성자 : <input type="text" name="writer"><br>
-		가격 : <input type="number" name="price"><br>
-		츨판사 : <input type="text" name="publisher"><br>
-		<button>제출하기</button><!-- 버튼 기본 타입 submit -->
+	<h3>2. @RequestParam 어노테이션을 이용해서 낱개로 값 가져오기</h3>
+	<form action="/param2/test2" method="post">
+		과자제목 : <input type="text" name = "snackName"><br>
+		회사 : <input type="text" name = "snackCompany"><br>
+		가격 : <input type="number" name = "snackPrice"><br>
+		선호순위 : <input type="text" name = "snackLike"><br>
+		<button>제출하기</button>
 	</form>
+	
+	<h3>3. @RequestParam 어노테이션 이용해서 다수 값 가져오기
+		--> ParamTwoController 생성해서 작성
+		
+		좋아하는 과자 String[]
+		선호하는 회사 List<String>
+	</h3>
+	<form action="/param2/likeSnackCompany" method="post">
+	
+		좋아하는 과자 : 
+			맛동산 <input type="checkbox" name="likeSnack" value="Matdongsan">
+			베베 <input type="checkbox" name="likeSnack" value="bebe">
+			썬칩 <input type="checkbox" name="likeSnack" value="sunChip">
+			
+		<br><br>
+		선호하는 회사 : 
+			올이온<input type="checkbox" name="likeCompany" value="olion">
+			햇에<input type="checkbox" name="likeCompany" value="haet">
+			<button>제출하기</button>
+	</form>
+	
+	
 </body>
 </html>

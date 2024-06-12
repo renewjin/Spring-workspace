@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Insert title here</title>
-	</head>
-	<body>
-		<h1>스프링 부트 연결하기</h1>
-		
-		<h3>스프링 부트 프로젝트 실행방법(서버 배포 방법)</h3>
-		
-		<pre>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>스프링 부트 연결하기</h1>
+
+	<h3>스프링 부트 프로젝트 실행방법(서버 배포 방법)</h3>
+
+	<pre>
 		src/main/java 하위  패키지에
 		OOOApplication.java 파일이 프로젝트 생성 시 자동 생성됨
 		(OOO 은 프로젝트 파일명)
@@ -23,79 +23,38 @@
 		http://localhost:8081
 		에러페이지 현재는 발생!
 		</pre>
-		
-		<h3>프로젝트 구조</h3>
-		<ul>
+
+	<h3>프로젝트 구조</h3>
+	<ul>
 		<li>src/main/java : 자바 소스코드를 모아두는 폴더</li>
 		<li>src/main/resources : 자바에서 사용할 자원, 설정 파일을 모아두는 폴더
 			<ul>
-				<li>templates : 
-					Java 템플릿(응답 화면)을 모아두는 폴더
-					주로 html존재
-				</li>
-				<li>
-					static : 
-					templates에 적용될 정적 자원을 모아두는 폴더
-					주로 javaScript, css, 이미지 등
-				</li>
-				<li>
-					application.properties : 
-					spring Boot 프로젝트 관련 설정을 정의하는 파일 (심하게 중요함)!!
-				</li>
-				
-				
-				<li>
-					maven : 아파치에서 개발한 프로젝트 관리 및 이해도구
-							pom.xml 파일로 존재
-								추가하고 싶은 기능을 작성
-				
-				</li>
-				
-				<li>
-					gradle : 그루비를 이용한 빌드 자동화 시스템
-							build.gradle 파일로 존재
-								추가하고 싶은 기능을 작성
-						
-							그루비란? 자바에 파이썬이나 루비 등의 특징을 더한 언어
-							코틀린을 이용한 빌드 자동화 시스템
-							코틀린이란? 웹 앱을 만드는 언어
-				</li>
-				
+				<li>templates : Java 템플릿(응답 화면)을 모아두는 폴더 주로 html존재</li>
+				<li>static : templates에 적용될 정적 자원을 모아두는 폴더 주로 javaScript, css,
+					이미지 등</li>
+				<li>application.properties : spring Boot 프로젝트 관련 설정을 정의하는 파일
+					(심하게 중요함)!!</li>
+
+
+				<li>maven : 아파치에서 개발한 프로젝트 관리 및 이해도구 pom.xml 파일로 존재 추가하고 싶은 기능을
+					작성</li>
+
+				<li>gradle : 그루비를 이용한 빌드 자동화 시스템 build.gradle 파일로 존재 추가하고 싶은
+					기능을 작성 그루비란? 자바에 파이썬이나 루비 등의 특징을 더한 언어 코틀린을 이용한 빌드 자동화 시스템 코틀린이란? 웹
+					앱을 만드는 언어</li>
+
 			</ul>
 		</li>
-		</ul>
-		
-		<hr>
-		<ol>
-			<li>
-				<a href="/test">요청 + forword 처리</a>
-			</li>
-			<li>
-				<a href="/example">이미지 보러가기</a>
-			</li>
-			<li>
-				<a href="/param/main">서버로 파라미터 제출하기</a>
-			</li>
-			<li>
-				<a href="/blog/blog-index">블로그 메인으로 이동하기</a>
-			</li>
-			<!-- 카페 메인으로 이동하기 만들기 -->
-			<li>
-				<a href="/cafe/cafe_index">카페 메인으로 이동하기</a>
-			</li>
-		</ol>
-	</body>
+	</ul>
+
+	<hr>
+	<ol>
+		<li><a href="/test">요청 + forword 처리</a></li>
+		<li><a href="/example">이미지 보러가기</a></li>
+		<li><a href="/param/main">서버로 파라미터 제출하기</a></li>
+		<li><a href="/blog/blog-index">블로그 메인으로 이동하기</a></li>
+		<!--  카페 메인으로 이동하기 만들기 -->
+		<li><a href="/cafe/cafe_index">카페 메인으로 이동하기</a></li>
+	</ol>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
