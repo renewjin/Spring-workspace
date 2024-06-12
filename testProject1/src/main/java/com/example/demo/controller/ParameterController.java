@@ -31,6 +31,6 @@ public class ParameterController {
 		log.info("로그 입력이름 : " + inputName);
 		log.info("로그 입력주소 : " + inputAddress);
 		log.info("로그 입력나이 : " + inputAge);
-		return "redirect:/param/main"; // 작성 다 되면 메인으로 돌아가기
+		return "redirect:/param/param-main"; // 작성 다 되면 메인으로 돌아가기
 	}
 }

@@ -33,7 +33,7 @@ public class BlogController {
 		log.debug("commentName : " + commentName);
 		log.debug("commentOpinion : " + commentOpinion);
 		*/
-		BlogDTO bd = new BlogDTO();
+		BlogDTO bd = new BlogDTO(); // 객체생성
 		bd.getCommentName();
 		bd.getCommentOption();
 		bd.setCommentName("홍길동");

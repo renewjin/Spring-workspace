@@ -34,7 +34,7 @@ public class ParameterController {
 		// templates/param/param-main.html 파일을 바라본다는 표시를 작성
 	}
 	
-	@PostMapping("test1") //param/test1 POST 방식 요청
+	@PostMapping("test1") //param/test1 POST 방식 요청 //PostMapping : 프론트엔드->백엔드
 	public String paramTest1(HttpServletRequest req) {
 		String inputName = req.getParameter("inputName"); 
 		//form 밑에 input 에서 name으로 inputName 존재하는 값 가져오기
