@@ -33,7 +33,7 @@ public class ParamTwoController {
 		log.info("snackPrice" + snackPrice);
 		log.info(snackLike);
 		
-		return "redirect:/param/main";
+		return "redirect:/param/mainmain";
 	}
 	
 	//메서드 paramLikeSnackCompany
@@ -44,7 +44,7 @@ public class ParamTwoController {
 			) {
 		log.info("좋아하는 과자들 : " + Arrays.toString(likeSnack));
 		log.info("좋아하는 회사들 : " + likeCompany);
-		return "redirect:/param/main";
+		return "redirect:/param/mainmain";
 	}
 
 }

@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ParameterController {
 
-	@GetMapping("main")
+	@GetMapping("mainmain")
 	public String paramMain() {
 		return "param/param-main"; // 폴더 param 안에 있는 param-main.html 파일 바라보기
 		// return 할 때 폴더명/파일명 작성
