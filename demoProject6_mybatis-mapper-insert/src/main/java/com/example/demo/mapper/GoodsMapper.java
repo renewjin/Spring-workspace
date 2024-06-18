@@ -10,9 +10,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.example.demo.dto.Goods;
 
-@Mapper //sql 사용할 리스트 목록
-public interface GoodsMapper {
-	void insertGoods(Goods goods);
+@Mapper //sql 사용할 리스트 목록, MyBatis에서 제공하는 애노테이션 인터페이스를 MyBatis 매퍼로 인식하도록
+public interface GoodsMapper { // interface GoodsMapper : 데이터베이스와 상호작용하는 메서드 정의
+	void insertGoods(Goods goods); // insertGoods 메서드는 Goods 객체를 데이터베이스에 삽입하는 sql연산을 수행 goods 
 	
 	
 }
