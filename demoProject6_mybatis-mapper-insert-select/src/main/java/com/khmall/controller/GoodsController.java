@@ -26,7 +26,8 @@ public class GoodsController {
 		model.addAttribute("msg", "상품이 성공적으로 등록됐습니다.");
 		
 		//"무언가 등록하고 "
-		return "productList";
+		//return "productList";
+		return "redirect:/product-list";
 	}
 	
 	@GetMapping("/product-list")

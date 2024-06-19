@@ -14,6 +14,7 @@
 	$ -> db나 controller에서 특정한 변수명을 가지고와서 변수명에 담긴 정보를 이용할 때 사용
 	* -> $모양으로 가져온 변수명을 앞에 붙여서 사용하겠다는 줄임말로 많이 사용 
 	-->
+	<!-- Controll에서 Post에 연결할 주소 -->
 	<form th:action="@{/register-product}" method="post" th:object="${goods}">
 		상품명 : <input type="text" th:field="*{goods_name}"><br>
 		상품가격 : <input type="text" th:field="*{goods_price}"><br>
