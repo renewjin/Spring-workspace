@@ -34,6 +34,7 @@ public class MemberController {
 		memberService.insertMember(member);
 		// model.addAttribute("select 로 db에 저장된 회원가입정보 가져오기")
 		model.addAttribute("msg", "멤버가 성공적으로 가입됐습니다.");
-		return "회원가입에 성공하면 이동할 html";
+		//return "회원가입에 성공하면 이동할 html";
+		return "success";
 	}
 }
