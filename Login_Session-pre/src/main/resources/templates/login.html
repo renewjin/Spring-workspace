@@ -7,9 +7,12 @@
 <body>
 	<h1>로그인</h1>
 	<form action="/login" method="post">
-		<input type="text" th:field="${}"><br>
-		<input type="text" th:field="${}"><br>
+		email : <input type="text" th:field="${m.email}"><br>
+		password : <input type="text" th:field="${m.password}"><br>
 		<button>로그인</button>
 	</form>
+	<div th:if="${error}">
+		<p th:text="${error}" style="color: red;"></p>
+	</div>
 </body>
 </html>

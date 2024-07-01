@@ -63,7 +63,7 @@ public class LoginController {
 		if(member == null) {
 			return "redirect:/login";
 		}
-		
+		System.out.println("member name :" + member.getMember_name());
 		// 만약에 모델에 정보가 담겨있으면 보여줄 멤버 객체
 		model.addAttribute("member",member);
 		return "myPage";
