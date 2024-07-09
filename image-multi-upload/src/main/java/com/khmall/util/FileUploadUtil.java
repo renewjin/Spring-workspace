@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 // 파일 업로드를 위해서 설정
 public class FileUploadUtil {
 	public static void saveFile(String uploadDir, String fileName, MultipartFile mpFile) throws IOException {
-		// 폴더에 파일을 업로드 하기 위해서 결오 설정
+		// 폴더에 파일을 업로드 하기 위해서 경로 설정
 		// C:/Users/user1/servlet_jsp_workspace/image-multi-upload/src/main/resources/static
 		
 		// 내가 지금 실행하고 있는 자바 파일 위치의 주소 가져오기 Path 객체 사용

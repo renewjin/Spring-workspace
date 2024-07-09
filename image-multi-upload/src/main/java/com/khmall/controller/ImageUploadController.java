@@ -38,6 +38,7 @@ public class ImageUploadController {
 	
 	@PostMapping("/upload") // post api 1개 생성 =  api/v2/img/upload
 	public void savImage(@RequestParam("files")MultipartFile[] files) {
+		// postman에서 key값을 files로 사용할 예정
 		String 업로드할폴더위치 = "imgFolder"; //static 밑에 imgFolder를 만들어서 업로드 시킬 예정
 		
 		//배열로 이미지를 담아서 한번에 전송
