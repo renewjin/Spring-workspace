@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kh.test.mapper.GoodsItemMapper">
+	<!-- resultMap의 type은 dto파일, id는 select의 resultMap과 동일 
+		id에는 primary key, result에는 나머지 컬럼명
+		column에는 sql 컬럼명
+		property는 dto에 작성한 변수명
+	-->
+	<resultMap type="com.kh.test.dto.GoodsItem" id="goodsMap">
+		<id column="item_id" property="itemId"></id>
+		<result column="item_name" property="itemName"/>
+		<result column="item_description" property="itemDes"/>
+		<result column="COUNT(*)" property="itemCount"/>
+	</resultMap>
+	
+	<select id="existsByName" resultType="java.lang.Integer" parameterType="com.kh.test.dto.GoodsItem" resultMap="goodsMap">
+		SELECT COUNT(*) FROM goods_item
+		WHERE item_name = #{itemName}
+	</select>
+
+</mapper>

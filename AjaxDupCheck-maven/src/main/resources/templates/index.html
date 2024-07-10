@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>thymeleaf 없이 Ajax를 활용한 중복확인</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#checkDup').click(function(){
+			var inputItemName = $('#itemName').val();
+			
+			$.ajax({
+				url: '/check', // controll에서 Mapping에 사용할 주소
+				type:'GET', // @GetMapping에 작성된 주소를 연결
+				data: {itemName: inputItemName}, 
+				// itemName -> controller에서 사용할 변수명, 
+				// inputItemName -> html에서 사용자가 입력한 값을 js에서 사용할 변수명
+				success : function(response){
+					if (response.isCheck) { //controller에서 put으로 가져온 isCheck
+						$('#dupMsg').text('이미 존재하는 상품명입니다');
+					} else {
+						$('#dupMsg').text('사용 가능한 상품명입니다');
+					}
+				},
+				error : function(){
+					$("#dupMsg").text('알 수 없는 오류 발생입니다.');
+				}
+			})
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>thymeleaf 없이 Ajax를 활용한 상품 중복확인</h1>
+	<label for="itemName">상품명</label>
+	<input type="text" id="itemName" name="itemName">
+	<button id="checkDup">중복확인 버튼</button>
+	<p id="dupMsg"></p>
+</body>
+</html>

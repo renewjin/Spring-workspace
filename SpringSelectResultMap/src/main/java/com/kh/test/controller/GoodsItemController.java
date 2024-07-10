@@ -14,7 +14,7 @@ import com.kh.test.service.GoodsItemService;
 
 import lombok.extern.slf4j.Slf4j;
 
-@RestController
+@RestController // 데이터를 반환할 때 주로 사용, @Controller -> view(html)를 반환할 때 사용
 @Slf4j
 public class GoodsItemController {
 	

@@ -24,6 +24,8 @@ public class GoodsItemService {
 		GoodsItem count = goodsItemMapper.existsByName(itemName); // resultMap 사용한 방식
 //		Integer totalCount = 참인지 거짓인지  ?   true이고  null이 아닐 때  : false null = 0 ;
 		Integer totalCount = count != null ? count.getItemCount()     : 0;
+		// Integer은 null 값을 처리할 수 있는 유연성을 제공
+		// Integer를 사용하면 count 객체가 null인지 확인한 후  null이면 totalCount을 0으로 초기화 할 수 있음
 		return totalCount != null && totalCount > 0; // true라고 전달할 예정 return = boolean
 		
 		
