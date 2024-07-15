@@ -22,7 +22,7 @@ public class GoodsItemController {
 	private GoodsItemService goodsItemService;
 	// 만약에 에러로  template [check] @Controller ->@RestController
 	@GetMapping("/check")//ajax에서 url에 작성한 url값 넣어주기
-	public Map<String, Boolean> existsByName(@RequestParam String test) {
+	public Map<String, Boolean> existsByName(@RequestParam() String test) {
 		//만약에 상품명이 조회가 된다면 이미 존재하는 상품명입니다. 만들기
 		
 		boolean isCheck = goodsItemService.existsByName(test);
