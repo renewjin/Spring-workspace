@@ -10,4 +10,7 @@ public interface TodoMapper {
 	
 	//int signup(DTO에 만든 TodoMember 가져오기);
 	int signup(TodoMember member);
+	
+	TodoMember login(TodoMember member); //id pw만 써도 되고, TodoMember 모두 써도 됨
+	//TodoMember login(String id, String pw); // id, pw 만 가져와서 로그인 하기 
 }
